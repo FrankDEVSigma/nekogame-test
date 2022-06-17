@@ -1,0 +1,30 @@
+{
+  "name": "nekogame-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "test": "set HOST=localhost&& set PORT=4005 && nodemon src/app.js",
+    "develop": "set NODE_ENV=development && nodemon src/app.js",
+    "production": "set NODE_ENV=production && nodemon src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.5",
+    "morgan": "^1.10.0",
+    "passport": "^0.5.2",
+    "socket.io": "^4.4.1",
+    "timeago.js": "^4.0.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

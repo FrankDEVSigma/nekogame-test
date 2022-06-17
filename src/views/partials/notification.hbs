@@ -1,0 +1,108 @@
+{{#if success }}
+
+	<div class="notification" style="background-color: green;" role="alert">
+		{{ success }}
+	</div>
+
+	{{/if}}
+
+
+
+{{#if registersuccess1 }}
+
+	<div class="notification" style="background-color: green;" role="alert">
+		{{ registersuccess1 }}
+	</div>
+
+	{{/if}}
+
+
+{{#if notifMedalFirst }}
+
+	<div class="notification" style="background-color: green;" role="alert">
+		{{ notifMedalFirst }}
+	</div>
+
+{{/if}}
+
+{{#if notifExpFirst }}
+
+	<div class="notification" style="background-color: green;" role="alert">
+		{{ notifExpFirst }}
+	</div>
+
+{{/if}}
+
+{{#if validaciones }}
+	{{#with validacionName}}
+	<div class="notification" style="background-color: green;" role="alert">
+		{{ msg }}
+	</div>
+	{{/with}}
+
+	{{#with validacionUsername}}
+	<div class="notification" style="background-color: green;" role="alert">
+		{{ msg }}
+	</div>
+	{{/with}}
+
+	{{#with validacionEmail}}
+	<div class="notification" style="background-color: green;" role="alert">
+		{{ msg }}
+	</div>
+	{{/with}}
+
+	{{#with validacionPassword}}
+	<div class="notification" style="background-color: green;" role="alert">
+		{{ msg }}
+	</div>
+	{{/with}}
+
+
+{{/if}}
+
+
+{{#if validacionExist }}
+
+	<div class="notification" style="background-color: green;" role="alert">
+		{{ validacionExist }}
+	</div>
+
+{{/if}}
+
+
+
+
+
+
+<!-- ////////////////// 
+
+////////////////////
+		JUEGOS
+////////////////////
+//////////////////////-->
+
+<!-- NEKOS BIG LOTTERY -->
+
+{{#if error }}
+
+	<div class="notification" style="background-color: red;" role="alert">
+		{{ error }}
+	</div>
+
+{{/if}}
+
+
+{{#if good }}
+
+	<div class="notification" style="background-color: blue;" role="alert">
+		{{ good }}
+	</div>
+
+{{/if}}
+
+
+
+
+
+
