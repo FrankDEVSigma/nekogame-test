@@ -551,7 +551,7 @@
 
 .roadmap{
 	margin: 0 !important;
-	height: fit-content !important;
+	height: auto !important;
 	flex-wrap: nowrap !important;
 	clear: none !important;
 }
