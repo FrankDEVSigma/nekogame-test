@@ -642,6 +642,7 @@
 .roadmap .line1, .line2, .line3{
 	display: flex;
 	flex-direction: row;
+	margin: 0 auto !important;
 }
 
 .whitepaper,
@@ -1026,6 +1027,11 @@
 	footer p{
 
 	   font-size: 80% !important;
+	}
+
+	footer .socials a{
+	   width: fit-content !important;
+	   height: fit-content !important;
 	}
 
 	footer .socials a img{
