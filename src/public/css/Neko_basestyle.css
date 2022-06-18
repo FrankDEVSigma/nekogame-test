@@ -404,6 +404,10 @@ footer p{
    font-size: 100% !important;
 }
 
+footer .ft{
+   height: 4rem !important;
+}
+
 footer .socials a{
    display: inline-flex;
    justify-content: center;
