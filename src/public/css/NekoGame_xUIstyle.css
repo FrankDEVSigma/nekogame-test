@@ -553,6 +553,7 @@
 	margin: 0 !important;
 	height: fit-content !important;
 	flex-wrap: nowrap !important;
+	clear: none !important;
 }
 
 .roadmap .rsubtitle{
@@ -1038,7 +1039,8 @@
 	}
 
 	footer .socials a img{
-	   width: 40%;
+	   width: 24px !important;
+	   height: 24px !important;
 
 	}
 
