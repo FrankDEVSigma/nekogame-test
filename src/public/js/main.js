@@ -1,79 +1,3 @@
-/*window.addEventListener("scroll", function(){
-
-	var altura = window.innerHeight/1.3;
-	//var boxContent = document.getElementById('homesecundaryshorts');
-	var box2 = document.getElementById("two");
-	var box3 = document.getElementById("three");
-	var box4 = document.getElementById("four");
-	var box6 = document.getElementById("six");
-
-
-
-	//var distancia = boxContent.getBoundingClientRect().top;
-	var distancia2 = box2.getBoundingClientRect().top;
-	var distancia3 = box3.getBoundingClientRect().top;
-	var distancia4 = box4.getBoundingClientRect().top;
-	var distancia6 = box6.getBoundingClientRect().top;
-
-
-	//boxContent.classList.add('con_view_up');
-
-	box2.classList.add('con_view_up');
-	box3.classList.add('con_view_up');
-	box4.classList.add('con_view_up');
-	
-
-
-	if(distancia2 <= altura){
-		box2.classList.remove('sin_view');
-		box2.classList.add('con_view');
-		console.log('yep1');
-
-	}else{
-		box2.classList.remove('con_view');
-		box2.classList.add('sin_view');
-		console.log('yep2');
-
-	}
-
-	if(distancia3 <= altura){
-		box3.classList.remove('sin_view');
-		box3.classList.add('con_view');
-		console.log('yep1');
-
-	}else{
-		box3.classList.remove('con_view');
-		box3.classList.add('sin_view');
-		console.log('yep2');
-
-	}
-
-	if(distancia4 <= altura){
-		box4.classList.remove('sin_view');
-		box4.classList.add('con_view');
-		console.log('yep1');
-
-	}else{
-		box4.classList.remove('con_view');
-		box4.classList.add('sin_view');
-		console.log('yep2');
-
-	}
-
-	if(distancia6 <= altura){
-		box6.classList.remove('sin_view');
-		box6.classList.add('con_view');
-		console.log('yep1');
-
-	}else{
-		box6.classList.remove('con_view');
-		box6.classList.add('sin_view');
-		console.log('yep2');
-
-	}
-});
-*/
-
 	const homeView = document.getElementById('homeprincipal');
 	const otherView = document.getElementById('otherview');
 
@@ -806,9 +730,4 @@
 
 	}
 
-	
-
-
-
-const lineProjects = document.getElementById('lineProjects');
 
