@@ -647,6 +647,7 @@
 	margin: 0 auto !important;
 	flex-wrap: nowrap !important;
 	height: fit-content !important;
+	max-height: 6rem !important;
 }
 
 .whitepaper,
