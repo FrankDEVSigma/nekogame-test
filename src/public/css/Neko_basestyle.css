@@ -358,7 +358,10 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 
  	
    scroll-behavior: smooth !important;
-	background: var(--neko-xbg-bandw-colorwhite);
+	/*background: var(--neko-xbg-bandw-colorwhite);*/
+   background: linear-gradient(to top right, rgba(40,243, 212, 0.1), var(--neko-xbg-bandw-colorwhite) 60%, rgba(234, 40, 243, 0.1));
+   /*background: linear-gradient(to bottom left, var(--neko-xbg-bandw-colorwhite) 60%, rgba(40,243, 212, 0.1));*/
+
  	font-family: var(--neko-xfont-ubuntu);
  	font-size: 18px;
    color: var(--neko-xbg-bandw-colorblack);
@@ -366,7 +369,8 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
    position: relative;
    z-index: 1;
    transition: 0.2s ease !important;
-
+   padding-top: 2rem;
+   /*min-height: calc(100vh - 55px - 150px) !important;*/
    /*background: linear-gradient(120deg, transparent 75%, #a13582 75%) 0 0, linear-gradient(240deg, transparent 75%, #a13582 75%) 0 0, linear-gradient(120deg, transparent 75%, #772760 75%) 28.867513452295906px -50px, linear-gradient(240deg, transparent 75%, #772760 75%) 28.867513452295906px 50px, linear-gradient(#48183b 50%, #39132e 50%);
   background-size: 57.73502690459181px 100px;*/
  }
@@ -381,11 +385,12 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 footer{
    background: var(--neko-xbg-bandw-colorblack);
    color: var(--neko-xbg-bandw-colorwhite);
-   position: relative;
-   z-index: 100;
+   position: relative !important;
+   z-index: 90 !important;
    font-size: 70%;
    text-align: center;
-   bottom: 100%;
+   bottom: 100% !important;
+   height: 210px !important;
 
 }
 
@@ -419,6 +424,14 @@ footer .socials a img{
 footer a{
    text-decoration: none;
    color: var(--neko-xbg-bandw-colorwhite);
+}
+
+footer .middlecontent{
+   margin-top: 1.5rem;
+}
+
+footer .rightsreserved{
+   margin-top: 1.5rem;
 }
 
  p{
@@ -463,6 +476,14 @@ footer a{
  	flex-wrap: wrap;
 
  }
+
+.container-sup{
+   min-height: calc(100vh - 55px - 210px) !important;
+}
+
+.container-sup-footnone{
+   min-height: 100vh !important;
+}
 
  .container-1_3{
    width: 33.33%;
@@ -634,11 +655,15 @@ footer a{
 	/*border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;*/
 	border-style: inset;
-   height: auto;
+   height: 55px !important;
    color: var(--neko-xbg-bandw-colorwhite);
 	/*box-shadow: inset -1px -1px 10px 6px rgba(229, 229, 229, 0.6) , -1px -1px 8px 4px rgba( 23, 23, 23, 0.2);*/
-   z-index: 30;
+   z-index: 130;
    transition: 0.2s ease;
+   position: fixed;
+   top: 0;
+   left: 0;
+   margin:  0;
 }
 
 header .container{
@@ -685,7 +710,7 @@ header nav{
    position: relative;
    width: 100%;
    flex-wrap: wrap;
-   z-index: 100;
+   z-index: 140;
    transition: 0.2s ease !important;
 }
 
@@ -751,6 +776,7 @@ header nav > ul li{
    height: 70%;
    position: relative;
    border-radius: 5px;
+   margin: 0;
 
 
 }
@@ -771,12 +797,12 @@ header nav > ul li ul{
    padding: 1rem 0rem;
    
    height: auto;
-   position: absolute;
-   top: 120%;
+   position: absolute !important;
+   top: 120% !important;
    right: 0;
    width: auto;
    flex-direction: column;
-   z-index: 30;
+   z-index: 130 !important;
    display: none;
    
 
@@ -836,12 +862,12 @@ header nav > ul li ul li ul{
    vertical-align: middle;
    justify-content: center;
    height: auto;
-   position: absolute;
+   position: absolute !important;
    top: 0%;
    left: -100%;
    width: 100%;
    flex-direction: column;
-   z-index: 15;
+   z-index: 115 !important;
    display: none !important;
    flex-wrap: wrap;
    
@@ -881,8 +907,8 @@ header nav > ul li ul li ul li a{
 
 
 
-header nav.dark_theme_nav ul li a,
-header nav.dark_theme_nav ul li label{
+.dark_theme_nav nav ul li a,
+.dark_theme_nav nav ul li label{
    border-radius: 0px;
    font-size: 1rem;
    width: 100%;
@@ -897,17 +923,17 @@ header nav.dark_theme_nav ul li label{
    
 }
 
-header nav.dark_theme_nav ul li a:hover,
-header nav.dark_theme_nav ul li label:hover{
+.dark_theme_nav nav ul li a:hover,
+.dark_theme_nav nav ul li label:hover{
    background-color: var(--neko-xbg-bandw-colorblack) !important;
    color: var(--neko-xbg-bandw-colorwhite) !important;
 }
 
-header nav.dark_theme_nav ul ul{
+.dark_theme_nav nav ul ul{
    display: none;
 }
 
-header nav.dark_theme_nav > ul{
+.dark_theme_nav nav > ul{
    display: flex;
    justify-content: right;
    width: 100%;
@@ -917,7 +943,7 @@ header nav.dark_theme_nav > ul{
 
 }
 
-header nav.dark_theme_nav > ul li{
+.dark_theme_nav nav > ul li{
    display: inline-flex;
    padding: 0rem 0rem;
    align-items: center;
@@ -928,8 +954,8 @@ header nav.dark_theme_nav > ul li{
 
 
 }
-header nav.dark_theme_nav > ul li a,
-header nav.dark_theme_nav > ul li label{
+.dark_theme_nav nav > ul li a,
+.dark_theme_nav nav > ul li label{
   
    border-radius: 5px;
 
@@ -939,39 +965,39 @@ header nav.dark_theme_nav > ul li label{
 
 
 
-header nav.dark_theme_nav > ul li ul{
+.dark_theme_nav nav > ul li ul{
    background-color: var(--neko-xbg-bandw-colorwhite) !important;
    color: var(--neko-xbg-bandw-colorblack) !important;
    padding: 1rem 0rem;
    
    height: auto;
-   position: absolute;
+   position: absolute !important;
    top: 120%;
    right: 0;
    width: auto;
    flex-direction: column;
-   z-index: 30;
+   z-index: 130 !important;
    display: none;
    
 
 
 
 }
-header nav.dark_theme_nav > ul li:hover ul{
+.dark_theme_nav nav > ul li:hover ul{
    display: inline-flex;
    align-items: center;
    vertical-align: middle;
 }
 
-header nav.dark_theme_nav > ul li #btnMenu {
+.dark_theme_nav nav > ul li #btnMenu {
     display: none;
 }
 
-header nav.dark_theme_nav > ul li #btnMenu:checked + label ul {
+.dark_theme_nav nav > ul li #btnMenu:checked + label ul {
     display: inline-flex;
 }
 
-header nav.dark_theme_nav > ul li ul li{
+.dark_theme_nav nav > ul li ul li{
    display: inline-flex;
    height: 3rem;
    width: 100%;
@@ -983,7 +1009,7 @@ header nav.dark_theme_nav > ul li ul li{
 
 }
 
-header nav.dark_theme_nav > ul li ul li a{
+.dark_theme_nav nav > ul li ul li a{
    display: inline-block;
    height: 3rem;
    align-items: center;
@@ -998,7 +1024,7 @@ header nav.dark_theme_nav > ul li ul li a{
 
 }
 
-header nav.dark_theme_nav > ul li ul li ul{
+.dark_theme_nav nav > ul li ul li ul{
    background-color: var(--neko-xbg-bandw-colorwhite) !important;
    color: var(--neko-xbg-bandw-colorblack) !important;
    padding: 1rem 0rem;
@@ -1006,12 +1032,12 @@ header nav.dark_theme_nav > ul li ul li ul{
    vertical-align: middle;
    justify-content: center;
    height: auto;
-   position: absolute;
+   position: absolute !important;
    top: 0%;
    left: -100%;
    width: 100%;
    flex-direction: column;
-   z-index: 15;
+   z-index: 115 !important;
    display: none !important;
    flex-wrap: wrap;
    
@@ -1019,14 +1045,14 @@ header nav.dark_theme_nav > ul li ul li ul{
 
 }
 
-header nav.dark_theme_nav > ul li ul li:hover ul{
+.dark_theme_nav nav > ul li ul li:hover ul{
    display: inline-flex !important;
    align-items: center;
    vertical-align: middle;
 
 }
 
-header nav.dark_theme_nav > ul li ul li ul li{
+.dark_theme_nav nav > ul li ul li ul li{
    display: inline-block;
    height: 3rem;
    width: 100%;
@@ -1037,7 +1063,7 @@ header nav.dark_theme_nav > ul li ul li ul li{
 
 
 }
-header nav.dark_theme_nav > ul li ul li ul li a{
+.dark_theme_nav nav > ul li ul li ul li a{
    border-radius: 0px !important;
 
    

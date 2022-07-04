@@ -7,7 +7,7 @@
     "dev": "nodemon src/app.js",
     "test": "set HOST=localhost&& set PORT=4005 && nodemon src/app.js",
     "develop": "set NODE_ENV=development && nodemon src/app.js",
-    "production": "set NODE_ENV=production && nodemon src/app.js"
+    "production": "set NODE_ENV=production && node src/app.js"
   },
   "keywords": [],
   "author": "",

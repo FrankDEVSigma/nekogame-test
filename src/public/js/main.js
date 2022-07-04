@@ -24,13 +24,10 @@
 	const themeColor = document.getElementById('themec');
 	const themeStyle = document.getElementById('themes');
 	const body = document.getElementById('body');
-	const bgOne = document.getElementById('bg-one');
-	const bgTwo = document.getElementById('bg-two');
 
 	var btnStyle = document.querySelectorAll('#btn_style');
 	const header = document.getElementById('navheader');
 	const logoHome = document.getElementById('logohome');
-	const nav = document.getElementById('nav');
 	const navLogoNekoFaceB = document.getElementById('navlogonekofb');
 	const navLogoNekoFaceW = document.getElementById('navlogonekofw');
 
@@ -111,14 +108,11 @@
 
 		  	if (localStorage.getItem('memeStyle') === 'false') {
 		  		
-			  	body.classList.add('dark_theme');
-			    bgOne.classList.add('bg-oneB');
-			    bgTwo.classList.add('bg-twoB');
+			  	body.classList.add('dark_theme', 'dark_theme_bg');
 
 			    
 			    header.classList.add('dark_theme_nav');
 			    logoHome.classList.add('colorb');
-			    nav.classList.add('dark_theme_nav');
 			    navLogoNekoFaceB.classList.remove('displayn');
 			    navLogoNekoFaceW.classList.add('displayn');
 			    menuDesplegable.classList.add('dark_theme_nav');
@@ -157,7 +151,6 @@
 			    
 			    header.classList.add('dark_theme_nav');
 			    logoHome.classList.add('colorb');
-			    nav.classList.add('dark_theme_nav');
 			    navLogoNekoFaceB.classList.remove('displayn');
 			    navLogoNekoFaceW.classList.add('displayn');
 			    menuDesplegable.classList.add('dark_theme_nav');
@@ -203,13 +196,10 @@
 
 		  	if (localStorage.getItem('memeStyle') === 'false') {
 			     
-		  		 body.classList.remove('dark_theme');
-			  	 bgOne.classList.remove('bg-oneB');
-			     bgTwo.classList.remove('bg-twoB');
+		  		 body.classList.remove('dark_theme', 'dark_theme_bg');
 
 			   	 header.classList.remove('dark_theme_nav');
 			     logoHome.classList.remove('colorb');
-			     nav.classList.remove('dark_theme_nav');
 			     navLogoNekoFaceB.classList.add('displayn');
 			     navLogoNekoFaceW.classList.remove('displayn');
 			     
@@ -249,7 +239,6 @@
 
 			   	 header.classList.remove('dark_theme_nav');
 			     logoHome.classList.remove('colorb');
-			     nav.classList.remove('dark_theme_nav');
 			     navLogoNekoFaceB.classList.add('displayn');
 			     navLogoNekoFaceW.classList.remove('displayn');
 			     
@@ -291,12 +280,9 @@
 		  	
 		  	if (localStorage.getItem('darkTheme') === 'true') {
 		  		
-			    body.classList.remove('dark_theme');
+			    body.classList.remove('dark_theme', 'dark_theme_bg');
 			    body.classList.add('style_meme');
-			    body.classList.add('colorw');
-			    bgOne.classList.add('displayn');
-			    bgTwo.classList.add('displayn');
-			    
+			    body.classList.add('colorw');			    
 
 		  	}
 
@@ -305,8 +291,6 @@
 		  		
 			  	body.classList.add('style_meme');
 			    body.classList.add('colorw');
-			    bgOne.classList.add('displayn');
-			    bgTwo.classList.add('displayn');
 			    
 
 			    var i;
@@ -333,11 +317,8 @@
 
 			  	body.classList.remove('style_meme');
 			    body.classList.remove('colorw');
-			  	body.classList.add('dark_theme');
-			    bgOne.classList.remove('displayn');
-			    bgTwo.classList.remove('displayn');
-			    bgOne.classList.add('bg-oneB');
-			    bgTwo.classList.add('bg-twoB');
+			  	body.classList.add('dark_theme', 'dark_theme_bg');
+
 
 			    
 
@@ -348,11 +329,7 @@
 		  		
 		  		
 			  	body.classList.remove('style_meme');
-			    body.classList.remove('colorw');
-			    bgOne.classList.remove('displayn');
-			    bgTwo.classList.remove('displayn');
-			    bgOne.classList.remove('bg-oneB');
-			    bgTwo.classList.remove('bg-twoB');
+			    body.classList.remove('colorw', 'dark_theme_bg');
 
 			    var i;
 				for (i = 0; i < line.length; i++) {
@@ -417,16 +394,13 @@
 		  	
 		  	if (localStorage.getItem('memeStyle') === 'false') {
 
-		  		body.classList.add('dark_theme');
-			    bgOne.classList.add('bg-oneB');
-			    bgTwo.classList.add('bg-twoB');
+		  		body.classList.add('dark_theme', 'dark_theme_bg');
 
 			    readMore.classList.remove('colorb');
 			    readMore.classList.add('colorw');
 
 			    header.classList.add('dark_theme_nav');
 			    logoHome.classList.add('colorb');
-			    nav.classList.add('dark_theme_nav');
 			    navLogoNekoFaceB.classList.remove('displayn');
 			    navLogoNekoFaceW.classList.add('displayn');
 			    homeInfoTokenB.classList.remove('displayn');
@@ -477,7 +451,6 @@
 			    readMore.classList.add('colorw');
 		  		header.classList.add('dark_theme_nav');
 			    logoHome.classList.add('colorb');
-			    nav.classList.add('dark_theme_nav');
 			    navLogoNekoFaceB.classList.remove('displayn');
 			    navLogoNekoFaceW.classList.add('displayn');
 			    homeInfoTokenB.classList.remove('displayn');
@@ -532,16 +505,13 @@
 		  	if (localStorage.getItem('memeStyle') === 'false') {
 
 
-		  		 body.classList.remove('dark_theme');
-			  	 bgOne.classList.remove('bg-oneB');
-			     bgTwo.classList.remove('bg-twoB');
+		  		 body.classList.remove('dark_theme', 'dark_theme_bg');
 
 			     readMore.classList.remove('colorw');
 			     readMore.classList.add('colorb');
 
 			   	 header.classList.remove('dark_theme_nav');
 			     logoHome.classList.remove('colorb');
-			     nav.classList.remove('dark_theme_nav');
 			     navLogoNekoFaceB.classList.add('displayn');
 			     navLogoNekoFaceW.classList.remove('displayn');
 			     homeInfoTokenB.classList.add('displayn');
@@ -587,7 +557,6 @@
 
 			   	 header.classList.remove('dark_theme_nav');
 			     logoHome.classList.remove('colorb');
-			     nav.classList.remove('dark_theme_nav');
 			     navLogoNekoFaceB.classList.add('displayn');
 			     navLogoNekoFaceW.classList.remove('displayn');
 			     homeInfoTokenB.classList.add('displayn');
@@ -642,11 +611,9 @@
 		  	
 		  	if (localStorage.getItem('darkTheme') === 'true') {
 		  		
-			    body.classList.remove('dark_theme');
+			    body.classList.remove('dark_theme', 'dark_theme_bg');
 			    body.classList.add('style_meme');
 			    body.classList.add('colorw');
-			    bgOne.classList.add('displayn');
-			    bgTwo.classList.add('displayn');
 			    viewBGNekos.classList.remove('displayn');
 			    
 
@@ -658,8 +625,7 @@
 			    readMore.classList.add('colorw');
 			  	body.classList.add('style_meme');
 			    body.classList.add('colorw');
-			    bgOne.classList.add('displayn');
-			    bgTwo.classList.add('displayn');
+			    body.classList.remove('dark_theme_bg');
 			    viewBGNekos.classList.remove('displayn');
 			    
 
@@ -686,11 +652,7 @@
 		  		
 			  	body.classList.remove('style_meme');
 			    body.classList.remove('colorw');
-			  	body.classList.add('dark_theme');
-			    bgOne.classList.remove('displayn');
-			    bgTwo.classList.remove('displayn');
-			    bgOne.classList.add('bg-oneB');
-			    bgTwo.classList.add('bg-twoB');
+			  	body.classList.add('dark_theme', 'dark_theme_bg');
 			    viewBGNekos.classList.add('displayn');
 
 
@@ -704,11 +666,7 @@
 		  		readMore.classList.remove('colorw');
 			    readMore.classList.add('colorb');
 			  	body.classList.remove('style_meme');
-			    body.classList.remove('colorw');
-			    bgOne.classList.remove('displayn');
-			    bgTwo.classList.remove('displayn');
-			    bgOne.classList.remove('bg-oneB');
-			    bgTwo.classList.remove('bg-twoB');
+			    body.classList.remove('colorw', 'dark_theme_bg');
 			    viewBGNekos.classList.add('displayn');
 
 			    var i;

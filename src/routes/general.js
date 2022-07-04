@@ -148,7 +148,9 @@ router.get('/nekogame', async (req, res) =>{
 	res.send('Página no encontrada');
 });*/
 router.get('*', function(req, res){
-  res.send('ruta no encontrada');
+  res.render('general/error', {
+  	footerNone: true
+  });
 
 });
 

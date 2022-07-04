@@ -105,6 +105,11 @@
 	font-size: 0.8rem !important;
 }
 
+.paddingtb1em{
+	padding-top: 1em !important;
+	padding-bottom: 1em !important;
+
+}
 
 .displayf{
 	display: flex !important;
@@ -164,21 +169,23 @@
 
 .bg-one{
 	z-index: 2;
-	position: absolute;
+	position: fixed;
     right: 0;
     top: 0;
     width: 50%;
-    height: 100%;
+    height: 100% !important;
+    /*min-height: calc(100vh - 55px - 150px) !important;*/
     background: linear-gradient(to top right, var(--neko-xbg-bandw-colorwhite) 60%, rgba(234, 40, 243, 0.1));
 }
 
 .bg-two{
 	z-index: 2;
-	position: absolute;
+	position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 0 !important;
     width: 50%;
-    height: 100%;
+    height: 100% !important;
+    /*min-height: calc(100vh - 55px - 150px) !important;*/
     background: linear-gradient(to bottom left, var(--neko-xbg-bandw-colorwhite) 60%, rgba(40,243, 212, 0.1));
 }
 
@@ -204,6 +211,12 @@
 .dark_theme{
 	background: var(--neko-xbg-bandw-colorblack) !important;
    	color: var(--neko-xbg-bandw-colorwhite) !important;
+}
+
+.dark_theme_bg{
+	 
+	background: linear-gradient(70deg, rgba(40,243,212,0.48) 0%, rgba(31,31,31,1) 9%, rgba(31,31,31,1) 48%, rgba(31,31,31,1) 91%, rgba(250,141,255,0.48081239331670167) 100%) !important; 
+	
 }
 
 
@@ -330,9 +343,37 @@
      -webkit-border-radius: 50%;
      background: rgba(6, 129, 195, 0.2);
      position: absolute;
-     left: 0;
-     bottom: 0;
+     left: -10%;
+     bottom: 10%;
      z-index: 3;
+     animation: miniC1 30s linear infinite;
+}
+
+@keyframes miniC1{
+	0%{
+		left: -10%;
+		bottom: 10%;
+	}
+	10%{
+		left: 0%;
+		bottom: 0%;
+	}
+	30%{
+		left: 40%;
+		bottom: 120%;	
+	}
+	50%{
+		left: 0%;
+		bottom: 0%;
+	}
+	75%{
+		left: 105%;
+		bottom: -120%;
+	}
+	100%{
+		left: -10%;
+		bottom: 10%;
+	}
 }
 
 
@@ -346,11 +387,46 @@
      -o-transform: rotate(45deg);
      transform: rotate(45deg);
      position: absolute;
-     left: 2%;
-     bottom:5%;
+     left: 4%;
+     bottom:120%;
      z-index: 3;
+     animation: miniCb1 30s linear infinite;
 }
 
+@keyframes miniCb1{
+	
+	0%{
+		left: 40%;
+		bottom: 120%;
+		transform: rotate(45deg);
+	}
+	20%{
+		left: 2%;
+		bottom: 5%;
+		transform: rotate(90deg);
+	}
+	30%{
+		left: -15%;
+		bottom: 10%;
+		transform: rotate(135deg);
+
+	}
+	60%{
+		left: 105%;
+		bottom: -120%;
+		transform: rotate(200deg);
+	}
+	90%{
+		left: 2%;
+		bottom: 5%;
+		transform: rotate(265deg);
+	}
+	100%{
+		left: -15%;
+		bottom: 10%;
+		transform: rotate(285deg);
+	}
+}
 
 .nekitobebespace{
 		 width: 20%;  
@@ -359,6 +435,16 @@
      right: 1%;
      top:  -10%;
      z-index: 3;
+     animation: nekitoBabySpace 3s linear infinite alternate;
+}
+
+@keyframes nekitoBabySpace{
+	from{
+		top: -10%;
+	}
+	to{
+		top: -5%;
+	}
 }
 
 .fase-on{
@@ -466,7 +552,7 @@
 .infotokenlogosw,
 .infosociallogob,
 .infosociallogow{
-	animation: all 0.2s ease !important;
+	transition: all 0.2s ease !important;
 }
 
 .buy_token_shortcuts .btn_style_1_div a:hover img{
@@ -972,17 +1058,15 @@
 	}
 
 	header nav > ul li ul{
-   background-color: var(--neko-xbg-bandw-colorblack);
-   color: var(--neko-xbg-bandw-colorwhite);
    padding: 1rem 0rem;
    
    height: auto;
    position: absolute;
-   top: 120%;
+   top: 55px !important;
    right: 0;
    width: auto;
    flex-direction: column;
-   z-index: 30;
+   z-index: 130;
    display: none;
    
 
@@ -1086,31 +1170,32 @@
 
 	}
 
-	header nav > ul li{
+	header nav > ul li,
+	.dark_theme_nav nav > ul li{
    margin-left: auto !important;
    margin-right: 0 !important;
 	}
 
-	header nav > ul li ul{
-	   background-color: var(--neko-xbg-bandw-colorblack);
-	   color: var(--neko-xbg-bandw-colorwhite);
+	header nav > ul li ul,
+	.dark_theme_nav nav > ul li ul{
 	   padding: 1rem 0rem;
 	  
 	   vertical-align: top !important;
 	   justify-content: center;
-	   height: auto !important;
-	   position: absolute;
-	   top: 120%;
+	   height: calc(100vh - 45px) !important;
+	   position: fixed;
+	   top: 44px !important;
 	   right: 0;
 	   width: 100vw !important;
 	   flex-direction: column;
-	   z-index: 300;
-	   display: none;
-	   flex-wrap: wrap;
-
+	   z-index: 130 !important;
+	   flex-wrap: nowrap;
+	   overflow-y: auto;
+	   margin: 0;
 
 	}
-	header nav > ul li ul > div{
+	header nav > ul li ul > div,
+	.dark_theme_nav nav > ul li ul > div{
 	   margin: 0.5rem 0 !important;
 	   display: flex;
 	   align-items: center;
@@ -1119,9 +1204,9 @@
 
 	}
 
-	header nav > ul li ul li ul{
-	   background-color: var(--neko-xbg-bandw-colorblack2);
-	   color: var(--neko-xbg-bandw-colorwhite);
+	header nav > ul li ul li ul,
+	.dark_theme_nav nav > ul li ul li ul{
+
 	   padding: 1rem 0rem;
 	   align-items: center;
 	   vertical-align: middle;
@@ -1136,10 +1221,6 @@
 	   display: none !important;
 	   flex-wrap: wrap;
 	   margin-top: 3rem;
-
-	   
-
-
 	}
 
 
