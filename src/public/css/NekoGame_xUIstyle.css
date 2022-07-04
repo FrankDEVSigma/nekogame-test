@@ -367,7 +367,7 @@
 		bottom: 0%;
 	}
 	75%{
-		left: 105%;
+		left: 110%;
 		bottom: -120%;
 	}
 	100%{
@@ -412,7 +412,7 @@
 
 	}
 	60%{
-		left: 105%;
+		left: 110%;
 		bottom: -120%;
 		transform: rotate(200deg);
 	}
@@ -635,6 +635,132 @@
 
 }
 
+#coheteNeko{
+	filter: drop-shadow(1px 1px 3px);
+	animation: coheteNekoToTheMoon 4s ease infinite;
+	position: relative;
+	z-index: 50;
+}
+
+@keyframes coheteNekoToTheMoon{
+	
+	0%{
+		transform: translate(0px, 0px);
+	}
+	25%{
+		transform: translate(3px, -5px);
+	}
+	50%{
+		transform: translate(1px, 2px);
+	}
+	75%{
+		transform: translate(-4px, 6px);
+	}
+	100%{
+		transform: translate(0px, 0px);
+	}
+
+}
+
+.cohete_neko_smoke,
+.cohete_neko_smoke2,
+.cohete_neko_smoke3,
+.cohete_neko_smoke4{
+	position: absolute !important;
+	left: 0;
+	top: 60%;
+	width: 20%;
+	transform: rotate(-20deg);
+	opacity: 1;
+}
+
+.cohete_neko_smoke{
+	animation: coheteSmoke 4s linear infinite alternate;
+	z-index: 4;
+}
+
+.cohete_neko_smoke2{
+	animation: coheteSmoke2 2s linear infinite;
+	z-index: 10;
+}
+
+.cohete_neko_smoke3{
+	animation: coheteSmoke3 3s linear infinite;
+	z-index: 5;
+}
+
+.cohete_neko_smoke4{
+	animation: coheteSmoke4 4s linear infinite;
+	z-index: 51;
+}
+
+@keyframes coheteSmoke{
+	from{
+		left: 5%;
+		top: 55%;
+		opacity: 1;
+	}
+	to{
+		left: 0%;
+		top: 60%;
+		opacity: 1;
+	}
+}
+
+@keyframes coheteSmoke2{
+	0%{
+		left: 10%;
+		top: 55%;
+		opacity: 0;
+	}
+	50%{
+		left: 0%;
+		top: 60%;
+		opacity: 1;
+	}
+	100%{
+		left: -10%;
+		top: 65%;
+		opacity: 0;
+	}
+}
+
+@keyframes coheteSmoke3{
+	0%{
+		left: 10%;
+		top: 55%;
+		opacity: 0;
+	}
+	50%{
+		left: 0%;
+		top: 60%;
+		opacity: 1;
+	}
+	100%{
+		left: -10%;
+		top: 65%;
+		opacity: 0;
+	}
+}
+
+@keyframes coheteSmoke4{
+	0%{
+		left: 10%;
+		top: 55%;
+		opacity: 0;
+	}
+	50%{
+		left: 0%;
+		top: 60%;
+		opacity: 1;
+	}
+	100%{
+		left: -10%;
+		top: 65%;
+		opacity: 0;
+	}
+}
+
 .roadmap{
 	margin: 0 !important;
 	height: auto !important;
@@ -735,6 +861,26 @@
 	height: fit-content !important;
 	max-height: 6rem !important;
 }
+
+#monticulo{
+	filter: drop-shadow(3px 4px 3px);
+}
+
+
+.monticulo_active{
+	animation: monticuloActive 4s linear infinite alternate;
+}
+
+@keyframes monticuloActive{
+
+	from{
+		transform: translateY(0px);
+	}
+	to{
+		transform: translateY(15px);
+	}
+}
+
 
 .whitepaper,
 .devs{
